@@ -6,7 +6,9 @@
   "scripts": {
     "start": "babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test-integration": "mocha --opts test/integration/mocha.opts Test/integration/*.js"
+    "test-integration": "mocha --opts test/integration/mocha.opts Test/integration/*.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +23,12 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.13.0",
+    "eslint-plugin-jsx-a11y": "^2.1.0",
+    "eslint-plugin-react": "^6.1.0",
+    "eslint-plugin-standard": "^2.0.0",
     "mocha": "^4.0.1",
     "supertest": "^3.0.0"
   }
