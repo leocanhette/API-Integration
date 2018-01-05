@@ -4,8 +4,7 @@ export default (app, Books) => {
     app.route('/books')
         .get((req, res) => {
             Books.findAll({})
-                .then(result => res.json(result))
-                .catch(() => res.status(412));
+                .then(result => result);
         })
         .post((req, res) => {
             Books.create(req.body)
