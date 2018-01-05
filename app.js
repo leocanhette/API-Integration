@@ -2,7 +2,7 @@ import express from 'express';
 import bodyparser from 'body-parser';
 import config from './Config/config';
 import datasource from './Config/datasource';
-import BooksRouter from './Routes/Books'
+import BooksRouter from './Routes/Books';
 
 const app = express();
 app.config = config;
