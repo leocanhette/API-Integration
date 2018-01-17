@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=prod babel-node index.js",
-    "test-integration": "cross-env NODE_ENV=test mocha --opts test/integration/mocha.opts Test/integration/*.js",
-    "test-unit": "cross-env NODE_ENV=test mocha --opts test/integration/mocha.opts Test/unit/**/*.js",
+    "test":"npm run lint:fix & npm run test-unit & npm run test-integration & npm run test-contracts",
+    "test-unit": "cross-env NODE_ENV=test mocha --opts Test/Unit/mocha.opts Test/Unit/**/*.js",
+    "test-integration": "cross-env NODE_ENV=test mocha --opts Test/Integration/mocha.opts Test/Integration/*.js",
+    "test-contracts": "cross-env NODE_ENV=test mocha --opts Test/Contracts/mocha.opts Test/Contracts/contracts/*.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -31,6 +33,8 @@
     "eslint-plugin-jsx-a11y": "^2.1.0",
     "eslint-plugin-react": "^6.1.0",
     "eslint-plugin-standard": "^2.0.0",
+    "joi": "^13.1.0",
+    "joi-assert": "0.0.3",
     "mocha": "^4.0.1",
     "supertest": "^3.0.0",
     "testdouble": "^3.3.0"
