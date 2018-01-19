@@ -6,8 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=prod babel-node index.js",
     "test": "npm run lint:fix & npm run test-unit & npm run test-integration & npm run test-contracts",
-    "test-unit": "cross-env NODE_ENV=test mocha --opts Test/Unit/mocha.opts Test/Unit/**/*.js",
-    "test-integration": "cross-env NODE_ENV=test mocha --opts Test/Integration/mocha.opts Test/Integration/*.js",
+    "test-unit": "cross-env NODE_ENV=test mocha --opts Test/Unit/mocha.opts Test/Unit/**/.js",
+    "test-integration": "cross-env NODE_ENV=test mocha --opts Test/Integration/mocha.opts Test/Integration/**/*.js",
     "test-contracts": "cross-env NODE_ENV=test mocha --opts Test/Contracts/mocha.opts Test/Contracts/contracts/*.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"

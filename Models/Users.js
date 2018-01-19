@@ -31,7 +31,6 @@ export default (sequelize, DataType) => {
   },
     {
       hooks: {
-                // function users == function(users)
         beforeCreate: users => {
           const salt = bcrypt.genSaltSync();
           users.set('password', bcrypt.hashSync(users.password, salt));
